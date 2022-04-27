@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Insta-Sohor</title>
+        <link rel="stylesheet" href="./css/style.css" />
+
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+
+        <!-- google Montserrat  font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+                <a class="navbar-brand" href="#">Insta-Sohor</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                            <i class="fa-solid fa-house"></i>
+                        </li>
+
+                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                            <i class="fa-solid fa-heart text-danger"></i>
+                        </li>
+
+                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main container mx-auto p-3">
+            <div id="posts">
+            </div>
+            <div id="liked">
+                <h1>Liked posts</h1>
+            </div>
+
+            <div id="reported">
+                <h1>Reported posts</h1>
+            </div>
+        </main>
+
+        <section  class="container mt-5" id="queation">
+             
+                <div>
+                    <h2>How does Javascript works?</h2>
+                    <p>JavaScript is a scripting language.  it currently runs on any operating system other than a browser and has all the features of a high-level programming language.
+                        when we run javascript code in browser it exicute with JS engin & show output.
+                        In js engin takes few steps. Every JS  has parse , Convertion to Machine code, Code Runs .In parse stage JS code parse line by line. If found any error, stop exicution and throw Error msg. Is all code is ok then produce a data structure called Abstruct, Syntext, Tree. Then convert Js code to Machine code with AST. When complete the convirtion then Run the JavaScript code .</p>
+
+                </div>
+
+                <div>
+                    <h3>What is Js event loop?</h3>
+                    
+                <p>
+                    The event-loop is an infinite loop that in each iteration verifies in the event queue if some event was triggered.and The event loop is the key of asynchronous programming in JavaScript. It just has one job: to keep an eye on the Call Stack and the Callback Queue. If the Call Stack is empty, the first event in the queue will be pushed to the Call Stack, which will effectively run it.  Each event is nothing more than a function callback.
+                </p>
+                </div>
+        </section>
+
+        <footer></footer>
+
+        <!-- add javascript  file  -->
+        <script src="./js/app.js"></script>
+    </body>
+</html>
